@@ -94,4 +94,4 @@ client.on('message', msg => {
     });
 
 
-client.login('ODQzNTE1NzQxNzY3OTkxMzI3.YKE_QA.zZuJ4Mt-eVjgzNYUc3bJ8R3wIj4');
+client.login(''); // Due to privacy this is not filled out
