@@ -12,7 +12,13 @@
 //
 // You can re-use this code for your own discord bot
 //
+require('dotenv').config()
+const config = require('../config.json')
 const discord = require('discord.js');
+const { TOKEN } = process.env
+const { prefix, name } = config
+
+
 const client = new discord.Client();
 
 
@@ -28,31 +34,35 @@ client.on('message', msg => {
     }
 
     if (msg.content == '@Just Chat Bot') {
-        msg.reply('Hi, what do you need?');
+        msg.send('Hi, what do you need?');
     }
 
     if (msg.content == '*help') {
-        msg.reply('Hi I can do many things');
-        msg.reply('I can give roles like Member Server Vote Ping ETC');
-        msg.reply('To give me a cmd just put *<text>');
-        msg.reply('also if the cmd is bigger then one word just put *text/text');
+        msg.send('You can tell me to do alot of things like make me do memes maths (up to a certain level),');
+        msg.send('And hell i even have little easter eggs/ refrences (If you can find them)');
+        msg.send('Here is a list of commands');
+        msg.send('------------------------------------------------------------------------');
+
+
+        msg.send('*hi');
+        msg.send('*help');
+        msg.send('*meme');
+        msg.send('*weirdfact');
+        msg.send('*invite/link');
+        msg.send('*lifetips');
     }
 
     if (msg.content == '*meme') {
-        msg.reply('What kind of meme do you want?');
-        if (msg.content == '*darkhumour') {
-            msg.reply('The neighbours children challenger me to a water fight, im checking discord while the kettle boils :)');
-        if (msg.content == '*deep') {
-            msg.reply(' Proof cats do not always land on their feet (picture of Mufasa)');
+        msg.reply('ME: I want to travel, MY BANK ACCOUNT: Where to work?'); or; msg.reply('CALL OF DUTY Microtransaction Warfare'); or; msg.reply('')
         }
-        }
-    }
+        
+    
     if (msg.content == '*Alfreds gay') {
         msg.reply('I smell cap...just kidding');
     }
 
     if (msg.content == '*invite/link') {
-        msg.reply('https://discord.gg/bdcCMZxZ');
+        msg.send('https://discord.gg/bdcCMZxZ');
     }
 
     if (msg.content == '*pp') {
@@ -83,12 +93,20 @@ client.on('message', msg => {
 
     if (msg.content == '*lifetips') {
         msg.reply('Here are some tips');
-        msg.reply('Do not google rule 34 for anything');
-        msg.reply('Do not delete system 32 or system 62');
+        msg.send('Do not google rule 34 for anything');
+        msg.send('Do not delete system 32 or system 62');
     }
 
     if (msg.content == '*UwU') {
-        msg.reply('Oh no not the UwU clan god help us')
+        msg.reply('Oh no not the UwU clan god help us');
+    }
+
+    if (msg.content == '*play') {
+        msg.reply('YOO calm down thats not me');
+    }
+
+    if (msg.content == '*1+1') {
+        msg.reply('That equals 2 :)');
     }
 
     });
